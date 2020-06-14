@@ -57,3 +57,15 @@ $(".saveBtn").on("click", function(){
 
 });
 
+
+// Grab data from local storage and display onto textArea 
+for(j=0; j < 9; j++){
+
+    //grab text from local storage using keyword + index
+    var getText = JSON.parse(localStorage.getItem("savedText" + j));
+
+    //if there text exists then display back onto textArea
+    if(getText !== null){
+        $("name" + j).text(getText);
+    }
+}
