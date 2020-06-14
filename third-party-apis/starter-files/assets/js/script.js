@@ -43,5 +43,17 @@ for(i=0; i < hours.length; i++){
     row.append(hourDiv, textArea, button); //apend hours, textArea, and save button onto row
     $(".container").append(row); //append row onto container class
 
-
 }
+
+
+// When saved button is clicked grab text and save it in local storage
+$(".saveBtn").on("click", function(){
+
+    //concatenate textArea name and button attribute 
+    var myText = $("#name" + $(this).attr("data-num")).val();
+
+    //store myText in localStorage as a string with keyword savedText
+    localStorage.setItem("savedText" + $(this).attr("data-num"), JSON.stringify(myText));
+
+});
+
