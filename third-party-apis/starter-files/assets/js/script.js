@@ -66,6 +66,6 @@ for(j=0; j < 9; j++){
 
     //if there text exists then display back onto textArea
     if(getText !== null){
-        $("name" + j).text(getText);
+        $("#name" + j).text(getText);
     }
 }
