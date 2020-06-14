@@ -32,4 +32,16 @@ for(i=0; i < hours.length; i++){
         textArea.attr("class", "form-control col-md-8 past");
     }
 
+    textArea.attr("id", "name" + i); //give textArea a specific: name + index
+
+    var button = $("<button>"); //dynamically create button element for save button
+    button.attr("class", "btn btn-primary col-md-2 saveBtn"); //give savebtn class for bootstrap styling
+    button.attr("type", "button");
+    button.attr("data-num", i); //give button a data-num attribute and index
+    button.text("Save"); //give button Save text
+
+    row.append(hourDiv, textArea, button); //apend hours, textArea, and save button onto row
+    $(".container").append(row); //append row onto container class
+
+
 }
